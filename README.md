@@ -32,7 +32,7 @@ Once the `eslint-config-ssjs` package is installed, you can use it by specifying
 
 It's good practice to use [`eslint:recommended` ruleset](http://eslint.org/docs/rules/) in your project to support front end scripts.
 
-To use Google style in conjunction with ESLint's recommended rule set, extend them both, making sure to list `ssjs` last:
+To use SSJS in conjunction with ESLint's recommended rule set, extend them both, making sure to list `ssjs` last:
 
 ```js
 {
