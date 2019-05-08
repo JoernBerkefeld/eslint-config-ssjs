@@ -1,0 +1,38 @@
+{
+	"name": "eslint-config-ssjs",
+	"version": "1.0.0",
+	"description": "ESLint config for Salesforce Marketing Cloud's Server-Side JavaScript",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoernBerkefeld/eslint-config-ssjs.git"
+	},
+	"keywords": [
+		"ssjs",
+		"eslint",
+		"sfmc",
+		"eslint-config",
+		"linter",
+		"jshint",
+		"jslint",
+		"quality"
+	],
+	"author": "joern.berkefeld@gmail.com",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/JoernBerkefeld/eslint-config-ssjs/issues"
+	},
+	"homepage": "https://github.com/JoernBerkefeld/eslint-config-ssjs#readme",
+	"devDependencies": {
+		"eslint": "^5.4.0"
+	},
+	"peerDependencies": {
+		"eslint": ">=5.4.0"
+	}
+}
