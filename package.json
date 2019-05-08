@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-ssjs",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "ESLint config for Salesforce Marketing Cloud's Server-Side JavaScript",
 	"main": "index.js",
 	"files": [
