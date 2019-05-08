@@ -16,8 +16,9 @@
 	"keywords": [
 		"ssjs",
 		"eslint",
-		"sfmc",
 		"eslint-config",
+		"eslintconfig",
+		"sfmc",
 		"linter",
 		"jshint",
 		"jslint",
