@@ -27,9 +27,6 @@ Once the `eslint-config-ssjs` package is installed, you can use it by specifying
 }
 ```
 
-
-### Using the `ssjs` config with `eslint:recommended`
-
 It's good practice to use [`eslint:recommended` ruleset](http://eslint.org/docs/rules/) in your project to support front end scripts.
 
 To use SSJS in conjunction with ESLint's recommended rule set, extend them both, making sure to list `ssjs` last:
@@ -43,6 +40,9 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend them both,
 }
 ```
 
+## Using the .ssjs extension in VSCode
+
+Make sure you associate ``*.ssjs`` with JavaScript in your IDE. That should  automatically enable linting via ESLint.
 
 ## License
 
