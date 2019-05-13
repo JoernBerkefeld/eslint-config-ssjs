@@ -4,6 +4,8 @@ Preset for Salesforce Marketing Cloud's Server-Side JavaScript.
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) 
 
+[![NPM](https://nodei.co/npm/eslint-config-ssjs.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/eslint-config-ssjs/)
+
 
 ## Installation
 
