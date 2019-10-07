@@ -27,7 +27,7 @@ module.exports = {
 				AccountUser: false,
 				Attribute: false,
 				Base64Decode: false,
-				Base64Encode: false
+				Base64Encode: false,
 				BeginImpressionRegion: false,
 				BounceEvent: false,
 				ContentArea: false,
