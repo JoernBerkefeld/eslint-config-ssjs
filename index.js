@@ -49,6 +49,7 @@ module.exports = {
 				Platform: false,
 				Portfolio: false,
 				QueryDefinition: false,
+				Redirect: false,
 				Request: false,
 				Script: false,
 				Send: false,
