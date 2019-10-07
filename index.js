@@ -20,6 +20,7 @@ module.exports = {
 				'no-extend-native': 'off',
 				'no-new': 'error',
 				'no-throw-literal': 'off',
+				'no-use-before-define': ['error', { 'variables': true, 'functions': false, 'classes': false }],
 				'no-var': 'off'
 			},
 			globals: {
