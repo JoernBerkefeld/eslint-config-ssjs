@@ -64,6 +64,7 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend with both,
         "no-console": "",
         "no-extend-native": "",
         "no-new": "",
+        "no-prototype-builtins": "",
         "no-throw-literal": "",
         "no-use-before-define": "",
         "no-var": ""
