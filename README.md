@@ -37,11 +37,12 @@ Once the `eslint-config-ssjs` package is installed, you can use it by specifying
 
 It's good practice to use [`eslint:recommended` ruleset](http://eslint.org/docs/rules/) in your project to support front end scripts.
 
-To use SSJS in conjunction with ESLint's recommended rule set, extend them both, making sure to list `ssjs` last:
+To use SSJS in conjunction with ESLint's recommended rule set, extend with both, making sure to list `ssjs` last. We do recommend to also use this together with `eslint-config-prettier` and `eslint-plugin-prettier`
 
 ```js
 {
-  "extends": ["eslint:recommended", "ssjs"],
+  "extends": ["eslint:recommended", "prettier", "ssjs"],
+  "plugins": ["prettier"],
   "rules": {
     // your other rules that don't conflict with the SSJS config
   },
