@@ -43,8 +43,32 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend them both,
 {
   "extends": ["eslint:recommended", "ssjs"],
   "rules": {
-    // your other rules
+    // your other rules that don't conflict with the SSJS config
+  },
+  "overrides": [
+    {
+      // your target JavaScript version and conflicting rules should only be
+      // set as override, as they would otherwise supersede the SSJS config
+      "files": ["*.js"],
+      "parserOptions": {
+        "ecmaVersion": 6
+      },
+      "rules": {
+        // the following rules should only be set here in the 'overrides' section
+        "prettier/prettier": "warn",
+        // note that the following is not setting proper values to the rules as
+        // that is up to your style guide. The empty "" are merely placeholders
+        "comma-dangle": "",
+        "new-cap": "",
+        "no-console": "",
+        "no-extend-native": "",
+        "no-new": "",
+        "no-throw-literal": "",
+        "no-use-before-define": "",
+        "no-var": ""
   }
+    }
+  ]
 }
 ```
 
