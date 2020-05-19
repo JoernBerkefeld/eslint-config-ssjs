@@ -15,6 +15,7 @@ module.exports = {
 				ecmaVersion: 3
 			},
 			rules: {
+				'comma-dangle': ['error', 'never'],
 				'new-cap': 'off',
 				'no-console': 'off',
 				'no-extend-native': 'off',
