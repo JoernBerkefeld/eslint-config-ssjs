@@ -8,16 +8,16 @@ Preset for Salesforce Marketing Cloud's Server-Side JavaScript.
 
 ## Features
 
--   rules limited to \*.ssjs files
--   all SSJS classes/methods offered by SFMC are defined as unchangable globals
--   ecma script 3 pre-defined
--   quirks of SSJS handled via custom rules
--   based on eslint recommended rules with as little changes as possible
+- rules limited to \*.ssjs files
+- all SSJS classes/methods offered by SFMC are defined as unchangable globals
+- ecma script 3 pre-defined
+- quirks of SSJS handled via custom rules
+- based on eslint recommended rules with as little changes as possible
 
 ## Installation
 
-```
-$ npm install --save-dev eslint eslint-config-ssjs
+```batch
+npm install --save-dev eslint eslint-config-ssjs
 ```
 
 ## Usage
@@ -67,9 +67,10 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend with both,
         "no-throw-literal": "",
         "no-use-before-define": "",
         "no-var": ""
-  }
+      }
     }
   ]
+
 }
 ```
 
