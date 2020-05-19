@@ -74,6 +74,30 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend with both,
 }
 ```
 
+## Using Prettier with SSJS
+
+Starting with version 2.x of prettier, the plugin automatically has "trailingComma" set to "es5". That's a problem because SSJS actually does not support this.
+
+Also, SFMC tends to remove all tabs when you save queries, scripts, code snippets, emails and cloud pages. We hence strongly recommend to set `useTabs` to `false` and define `tabWidth` according to your liking (2 or 4 are typical values).
+
+Add the following to your `.prettierrc` file to ensure the above concerns are adressed:
+
+```json
+{
+    "useTabs": false,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "overrides": [
+        {
+            "files": "*.ssjs",
+            "options": {
+                "trailingComma": "none"
+            }
+        }
+    ]
+}
+```
+
 ## Using the .ssjs extension in VSCode
 
 Make sure you associate `*.ssjs` with JavaScript in your IDE. That should automatically enable linting via ESLint.
