@@ -34,9 +34,9 @@
 	},
 	"homepage": "https://github.com/JoernBerkefeld/eslint-config-ssjs#readme",
 	"devDependencies": {
-		"eslint": "^7.0.0",
+		"eslint": "^7.10.0",
 		"npm-check": "^5.9.2",
-		"prettier": "^2.0.5"
+		"prettier": "^2.1.2"
 	},
 	"peerDependencies": {
 		"eslint": ">=5.4.0",
