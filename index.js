@@ -1,5 +1,5 @@
 /**
- * Copyright 2016 Jörn Berkefeld / joern.berkefeld@gmail.com
+ * Copyright 2020 Jörn Berkefeld / joern.berkefeld@gmail.com
  *
  * Licensed under the MIT License.
  */
@@ -12,7 +12,7 @@ module.exports = {
 		{
 			files: ['*.ssjs'],
 			parserOptions: {
-				ecmaVersion: 3
+				ecmaVersion: 3,
 			},
 			rules: {
 				'comma-dangle': ['error', 'never'],
@@ -22,8 +22,8 @@ module.exports = {
 				'no-new': 'error',
 				'no-prototype-builtins': 'off',
 				'no-throw-literal': 'off',
-				'no-use-before-define': ['error', { 'variables': true, 'functions': false, 'classes': false }],
-				'no-var': 'off'
+				'no-use-before-define': ['error', { variables: true, functions: false, classes: false }],
+				'no-var': 'off',
 			},
 			globals: {
 				Account: false,
@@ -60,11 +60,12 @@ module.exports = {
 				SenderProfile: false,
 				Stringify: false,
 				Subscriber: false,
+				Substring: false,
 				Template: false,
 				TriggeredSend: false,
 				Variable: false,
-				Write: false
-			}
-		}
-	]
+				Write: false,
+			},
+		},
+	],
 };
