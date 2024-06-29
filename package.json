@@ -2,10 +2,14 @@
 	"name": "eslint-config-ssjs",
 	"version": "1.1.13",
 	"description": "ESLint config for Salesforce Marketing Cloud's Server-Side JavaScript",
-	"main": "index.js",
-	"files": [
-		"index.js"
-	],
+	"main": "index.mjs",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"import": "./index.mjs",
+			"require": "./index.cjs"
+		}
+	},
 	"scripts": {},
 	"engines": {
 		"node": "^6.14.0 || ^8.10.0 || >=9.10.0"
@@ -36,7 +40,7 @@
 		"prettier": "^2.1.2"
 	},
 	"peerDependencies": {
-		"eslint": ">=5.4.0 <9.0.0",
+		"eslint": ">=9.0.0",
 		"eslint-config-prettier": ">=6.11.0",
 		"eslint-plugin-prettier": ">=3.1.3",
 		"prettier": ">=2.0.5"
