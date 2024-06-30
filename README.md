@@ -8,11 +8,11 @@ Preset for Salesforce Marketing Cloud's Server-Side JavaScript.
 
 ## Features
 
-- rules limited to \*.ssjs files
-- all SSJS classes/methods offered by SFMC are defined as unchangable globals
-- ecma script 3 pre-defined
-- quirks of SSJS handled via custom rules
-- based on eslint recommended rules with as little changes as possible
+-   rules limited to \*.ssjs files but can be extended to other files by adapting your eslint.config.js
+-   all SSJS classes/methods offered by SFMC are defined as unchangable globals
+-   ecma script 3 pre-defined
+-   quirks of SSJS handled via custom rules
+-   based on eslint recommended rules with as little changes as possible
 
 ## Installation
 
@@ -21,6 +21,58 @@ npm install --save-dev eslint eslint-config-ssjs
 ```
 
 ## Usage
+
+### Flat Config: eslint.config.js
+
+**Important:** Requires ESLint >=8.56.0 and eslint-config-ssjs >=2.0.0
+
+This plugin exports a recommended config that enforces good practices.
+
+#### ES Module (Recommended)
+
+The folowing will limit SSJS rules to files ending on `*.ssjs`:
+
+```js
+import sfmcSsjs from 'eslint-config-ssjs';
+
+export default [
+	// …
+	{
+		...sfmcSsjs.configs.recommended,
+		files: ['**/*.ssjs'],
+	},
+];
+```
+
+If you don't plan on writing any browser (normal) JavaScript, you can also use the following. This will apply the rules to all files:ggn
+
+```js
+import sfmcSsjs from 'eslint-config-ssjs';
+
+export default [
+	// …
+	sfmcSsjs.configs.recommended,
+];
+```
+
+#### CommonJS
+
+```js
+'use strict';
+const sfmcSsjs = require('eslint-config-ssjs');
+
+module.exports = [
+	// …
+	{
+		...sfmcSsjs.configs.recommended,
+		files: ['**/*.ssjs'],
+	},
+];
+```
+
+### Legacy: .eslintrc.\* or package.json
+
+**Important:** Requires ESLint <9.0.0 and eslint-config-ssjs <2.0.0
 
 Once the `eslint-config-ssjs` package is installed, you can use it by specifying `ssjs` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
 
@@ -46,32 +98,6 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend with both,
   "rules": {
     // your other rules that don't conflict with the SSJS config
   },
-  "overrides": [
-    {
-      // your target JavaScript version and conflicting rules should only be
-      // set as override, as they would otherwise supersede the SSJS config
-      "files": ["*.js"],
-      "parserOptions": {
-        "ecmaVersion": 6
-      },
-      "rules": {
-        // the following rules should only be set here in the 'overrides' section
-        "prettier/prettier": "warn",
-        // note that the following is not setting proper values to the rules as
-        // that is up to your style guide. The empty "" are merely placeholders
-        "comma-dangle": "",
-        "new-cap": "",
-        "no-console": "",
-        "no-extend-native": "",
-        "no-new": "",
-        "no-prototype-builtins": "",
-        "no-throw-literal": "",
-        "no-use-before-define": "",
-        "no-var": ""
-      }
-    }
-  ]
-
 }
 ```
 
@@ -85,17 +111,17 @@ Add the following to your `.prettierrc` file to ensure the above concerns are ad
 
 ```json
 {
-    "useTabs": false,
-    "tabWidth": 4,
-    "singleQuote": true,
-    "overrides": [
-        {
-            "files": "*.ssjs",
-            "options": {
-                "trailingComma": "none"
-            }
-        }
-    ]
+	"useTabs": false,
+	"tabWidth": 4,
+	"singleQuote": true,
+	"overrides": [
+		{
+			"files": "*.ssjs",
+			"options": {
+				"trailingComma": "none"
+			}
+		}
+	]
 }
 ```
 
