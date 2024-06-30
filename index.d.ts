@@ -1,5 +1,14 @@
-import { Linter } from 'eslint';
+import { ESLint, Linter } from 'eslint';
 
-declare const eslintConfigSsjs: Linter.FlatConfig;
+interface ESLintSfmcSsjsConfigs {
+	configs: {
+		recommended: Linter.FlatConfig;
+		legacy: {
+			recommended: Linter.Config;
+		};
+	};
+}
 
-export = eslintConfigSsjs;
+declare const plugin: ESLintSfmcSsjsConfigs & ESLint.Plugin;
+
+export = plugin;
