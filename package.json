@@ -1,7 +1,7 @@
 {
 	"name": "eslint-config-ssjs",
 	"version": "2.0.0",
-	"description": "ESLint config for Salesforce Marketing Cloud's Server-Side JavaScript",
+	"description": "[DEPRECATED] Use eslint-plugin-sfmc, prettier-plugin-sfmc, and the sfmc-language VS Code extension instead. ESLint config for Salesforce Marketing Cloud's Server-Side JavaScript",
 	"main": "index.mjs",
 	"exports": {
 		".": {
