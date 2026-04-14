@@ -1,5 +1,25 @@
 # eslint-config-ssjs
 
+> **DEPRECATED — This package is no longer maintained.**
+>
+> Please migrate to the actively maintained replacements:
+>
+> | Replacement | Purpose |
+> |---|---|
+> | [`eslint-plugin-sfmc`](https://www.npmjs.com/package/eslint-plugin-sfmc) | ESLint rules for both AMPscript and SSJS |
+> | [`prettier-plugin-sfmc`](https://www.npmjs.com/package/prettier-plugin-sfmc) | Prettier formatter for AMPscript and SSJS |
+> | [sfmc-language VS Code extension](https://marketplace.visualstudio.com/items?itemName=JoernBerkefeld.sfmc-language) | Full language support — diagnostics, hover, completions, formatting |
+>
+> These packages together cover everything `eslint-config-ssjs` provided and much more.
+
+---
+
+## Legacy documentation (for existing users)
+
+The rest of this page is kept for reference only. No further updates will be made.
+
+---
+
 Preset for Salesforce Marketing Cloud's Server-Side JavaScript.
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html)
@@ -9,7 +29,7 @@ Preset for Salesforce Marketing Cloud's Server-Side JavaScript.
 ## Features
 
 -   rules limited to \*.ssjs files but can be extended to other files by adapting your eslint.config.js
--   all SSJS classes/methods offered by SFMC are defined as unchangable globals
+-   all SSJS classes/methods offered by SFMC are defined as globals
 -   ecma script 3 pre-defined
 -   quirks of SSJS handled via custom rules
 -   based on eslint recommended rules with as little changes as possible
@@ -30,7 +50,7 @@ This plugin exports a recommended config that enforces good practices.
 
 #### ES Module (Recommended)
 
-The folowing will limit SSJS rules to files ending on `*.ssjs`:
+The following will limit SSJS rules to files ending on `*.ssjs`:
 
 ```js
 import sfmcSsjs from 'eslint-config-ssjs';
@@ -44,7 +64,7 @@ export default [
 ];
 ```
 
-If you don't plan on writing any browser (normal) JavaScript, you can also use the following. This will apply the rules to all files:ggn
+If you don't plan on writing any browser (normal) JavaScript, you can also use the following. This will apply the rules to all files:
 
 ```js
 import sfmcSsjs from 'eslint-config-ssjs';
@@ -103,11 +123,11 @@ To use SSJS in conjunction with ESLint's recommended rule set, extend with both,
 
 ## Using Prettier with SSJS
 
-Starting with version 2.x of prettier, the plugin automatically has "trailingComma" set to "es5". That's a problem because SSJS actually does not support this.
+Starting with version 2.x of prettier, the plugin automatically has "trailingComma" set to "es5". That's a problem because SSJS does not support this.
 
 Also, SFMC tends to remove all tabs when you save queries, scripts, code snippets, emails and cloud pages. We hence strongly recommend to set `useTabs` to `false` and define `tabWidth` according to your liking (2 or 4 are typical values).
 
-Add the following to your `.prettierrc` file to ensure the above concerns are adressed:
+Add the following to your `.prettierrc` file to address the above concerns:
 
 ```json
 {
